@@ -1,0 +1,180 @@
+/* Fondo y cuerpo */
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding-top: 70px; /* espacio para navbar fijo */
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(37, 117, 252, 0.85); /* mismo azul #2575fc con opacidad */
+  box-shadow: 0 4px 12px rgba(37, 117, 252, 0.5);
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.saludo{
+  margin: 0.8rem 0 0 2rem;
+
+}
+
+.navbar .nav-link {
+  color: #d1d9ffcc;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #84a9ff;
+}
+
+.btn-light {
+  color: #2575fc;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #84a9ff;
+  color: #111;
+}
+
+.btn-outline-light {
+  color: #d1d9ffcc;
+  border-radius: 8px;
+  border-color: #d1d9ffcc;
+  font-weight: 600;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  color: #fff;
+  border-color: #84a9ff;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+}
+
+.contact-container {
+            background-color: rgb(155, 180, 228);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+/* Títulos */
+h2, h3 {
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  color: #ffffffcc;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #d1d9ffcc;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+.card-image {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: no-repeat;
+  height: 16rem;  
+}
+
+.card-title {
+  color: #84a9ff;
+  font-weight: 700;
+}
+
+.card-text {
+  color: #cbd5ffcc;
+}
+
+.card-footer {
+  background: transparent;
+  border-top: none;
+}
+
+/* Precio */
+.fw-bold.text-primary {
+  color: #2575fc;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Botón agregar */
+.btn-success {
+  background-color: #2575fc;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 14px #2575fcaa;
+}
+
+.btn-success:hover {
+  background-color: #1450e6;
+  box-shadow: 0 6px 20px #1450e6cc;
+}
+
+/* Footer */
+footer#footer-sobre-nosotros {
+  background: rgba(37, 117, 252, 0.85);
+  color: #d1d9ffcc;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 -4px 15px rgba(37, 117, 252, 0.4);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer#footer-sobre-nosotros h5 {
+  font-weight: 700;
+  color: #84a9ff;
+  margin-bottom: 1rem;
+}
+
+footer#footer-sobre-nosotros small {
+  display: block;
+  margin-top: 1rem;
+  color: #cbd5ffcc;
+}
+
+/* Scroll smooth for navbar links */
+html {
+  scroll-behavior: smooth;
+}

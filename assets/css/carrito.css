@@ -1,0 +1,96 @@
+
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding: 1rem;
+}
+
+
+h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.8);
+  color: #e0e7ffcc;
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #d1d9ffcc;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.4);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #84a9ff;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #cbd5ffcc;
+}
+
+
+.text-accent {
+  color: #84a9ff;
+  font-size: 1.2rem;
+}
+
+
+.btn-outline-danger {
+  border-radius: 8px;
+  font-weight: 600;
+  color: #ffcccc;
+  border: 1px solid #ffcccc;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #fff;
+}
+
+.btn-secondary,
+.btn-danger {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+.text-end h4 {
+  color: #d1d9ffcc;
+  font-weight: 600;
+}
+
+
+.text-white {
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 16rem;
+    object-fit: no-repeat;
+
+  }
+}
+

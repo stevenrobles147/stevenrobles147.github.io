@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetZone - Tienda de Mascotas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app_mascotas.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">🐾 PetZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#juguetes">Juguetes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#alimentos">Alimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accesorios">Accesorios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer-sobre-nosotros">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html" target="_blank">Contacto</a></li> 
+        </ul>
+        <a href="carrito.html" class="btn btn-light me-2" target="_blank"><i class="bi bi-cart-fill"></i> Ver Carrito</a>
+        <button class="btn btn-outline-light" id="btn_logout">Cerrar Sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <h2 id="saludo_usuario" class=" saludo text-start"></h2>
+
+  <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <div class="container mt-5 pt-4">
+    <h2 class="text-center mb-4">Catálogo de Productos</h2>
+   
+    <div class="row mb-4 justify-content-center">
+      <div class="col-md-6">
+        <label for="input_busqueda" class="form-label text-white visually-hidden">Buscar</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control" id="input_busqueda" placeholder="Buscar producto...">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <select class="form-select" id="filtro_categoria">
+          <option value="todos">Todas las categorías</option>
+          <option value="juguetes">Juguetes</option>
+          <option value="alimentos">Alimentos</option>
+          <option value="accesorios">Accesorios</option>
+        </select>
+      </div>
+    </div>
+
+    
+    <section id="juguetes">
+      <h3 class="mb-5">🎾 Juguetes</h3>
+      <div class="row">
+        
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image13.webp" class="card-image" alt="Pelota de goma">
+            <div class="card-body">
+              <h5 class="card-title">Pelota de Goma</h5>
+              <p class="card-text">Para perros pequeños.</p>
+              <p class="fw-bold text-light">$12.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Pelota de Goma" data-precio="12000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/images14.jpg" class="card-image" alt="Cuerda mordedora">
+            <div class="card-body">
+              <h5 class="card-title">Cuerda Mordedora</h5>
+              <p class="card-text">Refuerza la mandíbula.</p>
+              <p class="fw-bold text-light">$15.500</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Cuerda Mordedora" data-precio="15500">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/images.jpeg" class="card-image" alt="Peluche para perros">
+            <div class="card-body">
+              <h5 class="card-title">Peluche para Perros</h5>
+              <p class="card-text">Suave y duradero.</p>
+              <p class="fw-bold text-light">$20.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Peluche para Perros"
+                data-precio="20000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image2.webp" class="card-image" alt="Frisbee">
+            <div class="card-body">
+              <h5 class="card-title">Frisbee</h5>
+              <p class="card-text">Ideal para juegos al aire libre.</p>
+              <p class="fw-bold text-light">$14.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Frisbee" data-precio="14000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image3.jpg" class="card-image" alt="Hueso de juguete">
+            <div class="card-body">
+              <h5 class="card-title">Hueso de Juguete</h5>
+              <p class="card-text">Ideal para masticar y entretenerse.</p>
+              <p class="fw-bold text-light">$13.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Hueso de Juguete" data-precio="13000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image4.webp" class="card-image" alt="Pelota lanzadora">
+            <div class="card-body">
+              <h5 class="card-title">Pelota Lanzadora</h5>
+              <p class="card-text">Para juegos más dinámicos.</p>
+              <p class="fw-bold text-light">$18.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Pelota Lanzadora" data-precio="18000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="alimentos">
+      <h3 class="mb-5">🍖 Alimentos</h3>
+      <div class="row">
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/descarga (2).jpeg" class="card-image" alt="Concentrado Premium">
+            <div class="card-body">
+              <h5 class="card-title">Concentrado Premium</h5>
+              <p class="card-text">Alimento completo.</p>
+              <p class="fw-bold text-light">$68.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Concentrado Premium"
+                data-precio="68000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/descarga (3).jpeg" class="card-image" alt="Galletas de premio">
+            <div class="card-body">
+              <h5 class="card-title">Galletas de Premio</h5>
+              <p class="card-text">Ideales para entrenamiento.</p>
+              <p class="fw-bold text-light">$9.500</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Galletas de Premio"
+                data-precio="9500">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image5.webp" class="card-image" alt="Comida húmeda">
+            <div class="card-body">
+              <h5 class="card-title">Comida Húmeda</h5>
+              <p class="card-text">Nutritiva y apetecible.</p>
+              <p class="fw-bold text-light">$25.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Comida Húmeda" data-precio="25000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image6.jpg" class="card-image" alt="Snacks naturales">
+            <div class="card-body">
+              <h5 class="card-title">Snacks Naturales</h5>
+              <p class="card-text">Para premiar a tu mascota.</p>
+              <p class="fw-bold text-light">$13.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Snacks Naturales" data-precio="13000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/images7.jpeg" class="card-image" alt="Croquetas para gatos">
+            <div class="card-body">
+              <h5 class="card-title">Croquetas para Gatos</h5>
+              <p class="card-text">Fórmula especial para felinos.</p>
+              <p class="fw-bold text-light">$45.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Croquetas para Gatos"
+                data-precio="45000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image8.webp" class="card-image" alt="Leche para cachorros">
+            <div class="card-body">
+              <h5 class="card-title">Leche para Cachorros</h5>
+              <p class="card-text">Suplemento nutritivo.</p>
+              <p class="fw-bold text-light">$22.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Leche para Cachorros"
+                data-precio="22000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="accesorios">
+      <h3 class="mb-5">🎒 Accesorios</h3>
+      <div class="row">
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/descarga (4).jpeg" class="card-image" alt="Collar con identificación">
+            <div class="card-body">
+              <h5 class="card-title">Collar con Identificación</h5>
+              <p class="card-text">Seguro y visible.</p>
+              <p class="fw-bold text-light">$25.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Collar con Identificación"
+                data-precio="25000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/descarga (5).jpeg" class="card-image" alt="Cama para mascotas">
+            <div class="card-body">
+              <h5 class="card-title">Cama para Mascotas</h5>
+              <p class="card-text">Cómoda y resistente.</p>
+              <p class="fw-bold text-light">$80.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Cama para Mascotas"
+                data-precio="80000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image9.webp" class="card-image" alt="Correa retráctil">
+            <div class="card-body">
+              <h5 class="card-title">Correa Retráctil</h5>
+              <p class="card-text">Control total al pasear.</p>
+              <p class="fw-bold text-light">$40.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Correa Retráctil" data-precio="40000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image10.webp" class="card-image" alt="Transportadora">
+            <div class="card-body">
+              <h5 class="card-title">Transportadora</h5>
+              <p class="card-text">Para viajes seguros.</p>
+              <p class="fw-bold text-light">$90.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Transportadora" data-precio="90000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image11.jpeg" class="card-image" alt="Plato antideslizante">
+            <div class="card-body">
+              <h5 class="card-title">Plato Antideslizante</h5>
+              <p class="card-text">Ideal para evitar derrames.</p>
+              <p class="fw-bold text-light">$18.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Plato Antideslizante"
+                data-precio="18000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/image/imagenes/image12.webp" class="card-image" alt="Juguete dispensador de comida">
+            <div class="card-body">
+              <h5 class="card-title">Juguete Dispensador de Comida</h5>
+              <p class="card-text">Entretenimiento y alimento juntos.</p>
+              <p class="fw-bold text-light">$35.000</p>
+            </div>
+            <div class="card-footer text-end">
+              <button class="btn btn-sm btn-success agregar-carrito" data-nombre="Juguete Dispensador de Comida"
+                data-precio="35000">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer id="footer-sobre-nosotros" class="bg-primary text-white text-center py-4 mt-5">
+    <div class="container">
+      <h5>Sobre Nosotros</h5>
+      <p>
+        PetZone es tu tienda confiable para productos para mascotas, ofreciendo juguetes, alimentos y accesorios de
+        calidad para consentir a tus amigos peludos.
+      </p>
+      <small>&copy; 2025 PetZone. Todos los derechos reservados.</small>
+    </div>
+    <p id="contador_visitas"></p>
+  </footer>
+
+  <script src="assets/js/app_mascotas.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
